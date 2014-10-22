@@ -1,3 +1,19 @@
+php_pear "dbase" do
+  action :install
+end
+
+require_recipe "wkhtmltopdf"
+
+# if app_server?
+#   app_name = 'autolink'
+#   remote_file "/data/#{app_name}/shared/constants.php" do
+#     owner node[:owner_name]
+#     group node[:owner_name]
+#     source "https://acd-deploy.s3.amazonaws.com/auto-staging/constants.php"
+#     action :create
+#   end
+# end
+
 #execute "testing" do
 #  command %Q{
 #    echo "i ran at #{Time.now}" >> /root/cheftime
@@ -47,7 +63,7 @@
 
 #uncomment to install specified packages
 # You must add your packages to packages/attributes/packages.rb
-#require_recipe "packages"
+require_recipe "packages"
 
 #uncomment to add specified cron jobs for application user (deploy)
 # You must add your cron jobs to cron/attributes/cron.rb
@@ -133,10 +149,10 @@
   # postgresql9_pg_trgm "dbname"
   # postgresql9_pgcrypto "dbname"
   # postgresql9_pgrowlocks "dbname"
-  
+
   # PostGis 1.5 (use with versions 9.0, 9.1, 9.2)
   # postgresql9_postgis "dbname"
-  
+
   # PostGis 2.0 (use with versions >= 9.2)
   #postgresql9_postgis2 "dbname"
   # postgresql9_seg "dbname"
@@ -145,15 +161,15 @@
   # postgresql9_test_parser "dbname"
   # postgresql9_unaccent "dbname"
   # postgresql9_uuid_ossp "dbname"
-  
-  
+
+
   # 9.1 and 9.2 Extensions
   # postgresql9_file_fdw "dbname"
   # postgresql9_xml2 "dbname"
-  
+
   #9.2 Extensions
   # postgresql9_pg_stat_statements "dbname"
-  
+
   # Admin-Level Contribs
   # postgresql9_pg_buffercache "postgres"
   # postgresql9_pg_freespacemap "postgres"
