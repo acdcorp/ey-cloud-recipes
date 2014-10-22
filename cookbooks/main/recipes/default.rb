@@ -3,6 +3,7 @@ php_pear "dbase" do
 end
 
 require_recipe "wkhtmltopdf"
+include_recipe "autolink"
 
 # if app_server?
 #   app_name = 'autolink'
