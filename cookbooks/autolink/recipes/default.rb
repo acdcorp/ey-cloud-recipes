@@ -14,8 +14,3 @@ execute "nginx reload" do
   command "/etc/init.d/nginx reload"
   action :nothing
 end
-
-execute "remove newrelic from autolink.conf" do
-  command "sed -i.bak '/newrelic\.appname/d' /etc/nginx/servers/keep.autolink.conf"
-  notifies :run, resources(:execute => "nginx reload")
-end
