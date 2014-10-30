@@ -7,7 +7,6 @@
 # Examples below:
 
 default[:packages] = [
-  {:name => "app-text/pdftk", :version => "1.44"},
   {:name => "dev-php/pecl-memcached", :version => "2.1.0-r1"},
   {:name => "dev-php/pecl-apc", :version => "3.1.13"},
   {:name => "dev-php/pecl-http", :version => "1.7.4"}

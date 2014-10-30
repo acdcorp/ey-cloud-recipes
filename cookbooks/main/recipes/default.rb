@@ -5,6 +5,7 @@ end
 require_recipe "wkhtmltopdf"
 include_recipe "autolink"
 include_recipe "timezone"
+include_recipe "pdftk"
 
 # if app_server?
 #   app_name = 'autolink'
